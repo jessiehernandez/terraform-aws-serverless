@@ -30,8 +30,6 @@ No requirements.
 | [aws_iam_role.apigateway_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 | [aws_iam_role_policy.apigateway_role_cloudwatch_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
 | [aws_iam_role_policy_attachment.apigateway_access_to_cloudwatch](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
-| [aws_iam_policy_document.apigateway_assume_role_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
-| [aws_iam_policy_document.apigateway_role_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 
 ## Inputs
 
@@ -54,7 +52,7 @@ the module can be called as follows:
 
 ```
 module "apigateway_role" {
-  source  = "jessiehernandez/database-credentials-rotator/aws/apigateway-role"
+  source  = "jessiehernandez/serverless/aws/apigateway-role"
   version = "1.0.0"
 
   resource_prefix = "mycompany-dev"
